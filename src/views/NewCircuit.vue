@@ -149,8 +149,8 @@ export default {
     breadcrumpData: {
       title: "Add New Customer",
       goBack: true,
-    },  
-    valid: false, 
+    },
+    valid: false,
     customerId: "",
     siteId: "",
     meterId: "",
@@ -247,21 +247,20 @@ export default {
   },
 
   methods: {
-    onSave() {
+    onSave() { 
       const allCircuits = [
         ...this.customerData.sites[0].meters[0].circuits,
         ...this.circuits,
       ];
-
       this.customerData.sites[this.siteIndex].meters[this.meterIndex].circuits =
         allCircuits;
-
       if (this.valid) {
         this.$axios
           .put(`${urls.URL_CUSTOMERS}/${this.customerId}/`, this.customerData)
           .then(() => {
             this.notify("New Circuit Added!");
-            this.resetData(); 
+            this.resetData();
+            this.goBack()
           });
       } else {
         this.notify("Please fill required areas!");
@@ -274,7 +273,8 @@ export default {
           .put(`${urls.URL_CUSTOMERS}/${this.customerId}`, this.customerData)
           .then(() => {
             this.notify("Circuits Updated!");
-            this.resetData(); 
+            this.resetData();
+            this.goBack()
           });
       } else {
         this.notify("Please fill required areas!");
@@ -325,6 +325,12 @@ export default {
 
     deleteSubCircuit(index, subCircuitIndex) {
       this.circuits[index].subCircuits.splice(subCircuitIndex, 1);
+    },
+
+    goBack() {
+      this.$router.push({
+        name: "MeterList",
+      });
     },
   },
 };

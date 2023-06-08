@@ -10,8 +10,8 @@
           "id": "site1-1",
           "name": "Site 1",
           "coordinates": {
-            "latitude": 35.937496,
-            "longitude": 35.937496
+            "latitude": 35,
+            "longitude": 35
           },
           "address": "adres-xx1",
           "postCode": "postal-code-xx",
@@ -184,8 +184,8 @@
           "id": "site2",
           "name": "Site 1",
           "coordinates": {
-            "latitude": 35.937496,
-            "longitude": 35.937496
+            "latitude": 35,
+            "longitude": 35
           },
           "address": "adres-xx1",
           "postCode": "postal-code-xx",
@@ -300,8 +300,8 @@
           "id": "site1-1",
           "name": "Site 1",
           "coordinates": {
-            "latitude": 35.937496,
-            "longitude": 35.937496
+            "latitude": 35,
+            "longitude": 35
           },
           "address": "adres-xx1",
           "postCode": "postal-code-xx",
@@ -408,8 +408,8 @@
           "id": "site2",
           "name": "Site 1",
           "coordinates": {
-            "latitude": 35.937496,
-            "longitude": 35.937496
+            "latitude": 35,
+            "longitude": 35
           },
           "address": "adres-xx1",
           "postCode": "postal-code-xx",
@@ -524,8 +524,8 @@
           "id": "site1-1",
           "name": "Site 1",
           "coordinates": {
-            "latitude": 35.937496,
-            "longitude": 35.937496
+            "latitude": 35,
+            "longitude": 35
           },
           "address": "adres-xx1",
           "postCode": "postal-code-xx",
@@ -658,8 +658,8 @@
           "id": "site2",
           "name": "Site 1",
           "coordinates": {
-            "latitude": 35.937496,
-            "longitude": 35.937496
+            "latitude": 35,
+            "longitude": 35
           },
           "address": "adres-xx1",
           "postCode": "postal-code-xx",

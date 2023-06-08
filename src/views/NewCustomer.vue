@@ -98,9 +98,7 @@
                 type="number"
                 step=".01"
                 clearable
-                v-model="site.coordinates.latitude"
-                :rules="textRules"
-                :counter="100"
+                v-model="site.coordinates.latitude" 
                 label="Latitude"
                 required
                 variant="underlined"
@@ -112,9 +110,7 @@
                 type="number"
                 step=".01"
                 clearable
-                v-model="site.coordinates.longitude"
-                :rules="textRules"
-                :counter="100"
+                v-model="site.coordinates.longitude" 
                 label="Longitude"
                 required
                 variant="underlined"

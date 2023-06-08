@@ -13,24 +13,6 @@
     <td>{{ item.name }}</td>
     <td>{{ item.serialNumber }}</td>
     <td>{{ item.installationDate }}</td>
-
-    <td>
-      <div class="text-center">
-        <v-icon
-          color="green-darken-2"
-          icon="mdi-pencil-outline"
-          class="mx-1"
-          @click="$emit('delete-todo-item', item)"
-        ></v-icon>
-
-        <v-icon
-          color="red-darken-2"
-          icon="mdi-trash-can-outline"
-          class="mx-1"
-          @click="deleteItem(item)"
-        ></v-icon>
-      </div>
-    </td>
   </tr>
 
   <!--Circuits Content -->
@@ -72,7 +54,7 @@
 import ShowCircuits from "@/components/customers/circuits/ShowCircuits";
 export default {
   props: ["item", "meterIndex"],
-  inject: ["provideDataMeter", "deleteItem"],
+  inject: ["provideDataMeter"],
 
   components: {
     ShowCircuits,

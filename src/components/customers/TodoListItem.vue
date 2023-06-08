@@ -9,7 +9,7 @@
       </v-card-actions>
     </th>
 
-    <td>{{ item.id }}</td>
+    <!-- <td>{{ item.id }}</td> -->
     <td>{{ item.name }}</td>
     <td>{{ item.email }}</td>
     <td>{{ item.vatNumber }}</td>
@@ -54,8 +54,7 @@
               :site="site"
               :customerId="item.id"
               :siteId="site.id"
-              :siteIndex="index"
-              @delete-todo-item="$emit('delete-todo-item', $event)"
+              :siteIndex="index" 
             />
           </div>
         </div>

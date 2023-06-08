@@ -2,8 +2,7 @@
   <v-table>
     <thead>
       <tr>
-        <th class="text-left">Details</th>
-        <th class="text-left">ID</th>
+        <th class="text-left">Details</th> 
         <th class="text-left">Name</th>
         <th class="text-left">Email</th>
         <th class="text-left">Vat Number</th>

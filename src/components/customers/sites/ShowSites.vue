@@ -5,29 +5,12 @@
       height="200px"
       cover
     ></v-img>
- 
+
     <div>
       <div class="d-flex justify-space-between align-content-start">
-        <v-card-title> Site Name: {{ site.name }} </v-card-title>
-        <div class="mt-3 pr-3">
-          <v-icon
-            size="large"
-            color="green-darken-2"
-            icon="mdi-pencil-outline"
-            class="mx-1"
-            @click="$emit('delete-todo-item', item)"
-          ></v-icon>
-
-          <v-icon
-            size="large"
-            color="red-darken-2"
-            icon="mdi-trash-can-outline"
-            class="mx-1"
-            @click="$emit('delete-todo-item', item)"
-          ></v-icon>
-        </div>
+        <v-card-title> Site Name: {{ site.name }} </v-card-title> 
       </div>
- 
+
       <v-table>
         <tbody>
           <tr>
@@ -51,20 +34,6 @@
           </tr>
         </tbody>
       </v-table>
-
-      <!-- <v-card-subtitle>
-        <span class="font-weight-bold">Coordinates:</span>
-        {{ site.coordinates.latitude }} -
-        {{ site.coordinates.longitude }}
-      </v-card-subtitle>
-
-      <v-card-subtitle>
-        <span class="font-weight-bold">Address:</span> {{ site.address }}
-      </v-card-subtitle>
-
-      <v-card-subtitle>
-        <span class="font-weight-bold">Post Code:</span> {{ site.postCode }}
-      </v-card-subtitle> -->
     </div>
 
     <router-link
@@ -73,30 +42,30 @@
       active-class="active"
       exact
     >
-    {{customerName}}
+      {{ customerName }}
       <v-btn color="darkblue-lighten-2" variant="text" class="my-3">
         Show Meters
       </v-btn>
-    </router-link> 
+    </router-link>
   </v-card>
 </template>
 
-<script> 
-
+<script>
 export default {
-  props: ["site","customerId", "siteId", "siteIndex"],
+  props: ["site", "customerId", "siteId", "siteIndex"],
   inject: ["provideCustomerData"],
- 
+
   created() {
-    this.metersPath = this.provideCustomerData.id
-    console.log(this.provideCustomerData)
-    console.log(this.provideCustomerData.id)
+    this.metersPath = this.provideCustomerData.id;
+    console.log(this.provideCustomerData);
+    console.log(this.provideCustomerData.id);
   },
 
   data: () => ({
     show: false,
-    metersPath: ""
+    metersPath: "",
   }),
+ 
 };
 </script>
 

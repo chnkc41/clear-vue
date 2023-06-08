@@ -3,7 +3,7 @@
     <div>
       <div class="d-flex justify-space-between align-content-start mb-3">
         <v-card-title> Circuit Name: {{ circuit.name }} </v-card-title>
-        <div class="mt-3 pr-3">
+        <div class="d-flex mt-3 pr-3">
           <div>
             <router-link
               :to="to"
@@ -67,8 +67,7 @@
             <tr>
               <th class="text-left">Name</th>
               <th class="text-left">Installation Date</th>
-              <th class="text-left">Is Main</th>
-              <th class="text-center">Actions</th>
+              <th class="text-left">Is Main</th> 
             </tr>
           </thead>
           <tbody> 

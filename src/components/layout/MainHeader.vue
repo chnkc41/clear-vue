@@ -5,7 +5,7 @@
         to="/"
         class="text-decoration-none"
         active-class="active"
-        exact 
+        exact
       >
         <v-img :src="require('@/assets/logo.svg')" class="my-3" contain />
       </router-link>
@@ -41,6 +41,9 @@
           ></v-icon>
         </v-btn>
       </router-link>
+
+      <!-- color="primary" -->
+      <v-btn class="ma-2" @click="$router.go(-1)"> Go Back </v-btn>
     </div>
   </header>
 </template>

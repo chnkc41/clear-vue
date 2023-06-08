@@ -1,5 +1,5 @@
 <template>
-  <MainHeader :breadcrumpData="breadcrumpData" />
+  <MainHeader />
 
   <v-card max-width="900px" class="mx-auto">
     <v-form v-model="valid" fast-fail @submit.prevent>
@@ -106,8 +106,24 @@
           Cancel
         </v-btn>
 
-        <v-btn type="submit" class="ma-2" color="primary" @click="onSave">
+        <v-btn
+          type="submit"
+          class="ma-2"
+          color="primary"
+          @click="onSave"
+          v-if="!circuitIndex"
+        >
           Save <v-icon end icon="mdi-plus"></v-icon>
+        </v-btn>
+
+        <v-btn
+          type="submit"
+          class="ma-2"
+          color="primary"
+          @click="onUpdate"
+          v-if="circuitIndex"
+        >
+          Update <v-icon end icon="mdi-plus"></v-icon>
         </v-btn>
       </v-card-actions>
     </v-form>
@@ -136,11 +152,11 @@ export default {
 
   data: () => ({
     valid: false,
-    breadcrumpData: {
-      title: "Add New Circuit",
-      buttonText: "Go Back",
-      buttonPath: "/",
-    },
+    // breadcrumpData: {
+    //   title: "Add New Circuit",
+    //   buttonText: "Go Back",
+    //   buttonPath: "/",
+    // },
 
     customerId: "",
     siteId: "",
@@ -186,6 +202,29 @@ export default {
         return "E-mail must be valid.";
       },
     ],
+
+    testCircuit: [
+      {
+        id: "circuit-1-1-1",
+        name: "Circuit 1.1.1",
+        installationDate: "Mon Jun 05 2023",
+        isMain: true,
+        subCircuits: [
+          {
+            id: "subCircuits1",
+            name: "Circuit 1.1.1.1",
+            installationDate: "Mon Jun 05 2023",
+            is_main: false,
+          },
+          {
+            id: "subCircuits2",
+            name: "Circuit 1.1.1.2",
+            installationDate: "Mon Jun 05 2023",
+            is_main: false,
+          },
+        ],
+      },
+    ],
   }),
 
   created() {
@@ -199,44 +238,67 @@ export default {
 
     this.$axios
       .get(`${urls.URL_CUSTOMERS}/${this.customerId}`)
-      .then((response) => { 
+      .then((response) => {
         this.customerData = response.data;
-        
+
         if (this.circuitIndex) {
-          const newCircuit = response.data.sites[this.siteIndex].meters[this.meterIndex].circuits[this.circuitIndex]
-          this.circuits = JSON.stringify(newCircuit); 
+          const newCircuit = [];
+          newCircuit.push(
+            response.data.sites[this.siteIndex].meters[this.meterIndex]
+              .circuits[this.circuitIndex]
+          );
+          // this.circuits = newCircuit;
+          console.log("newCircuit");
+          console.log(newCircuit);
+          console.log("circuit");
+          console.log(this.circuits);
+
+          this.circuits = newCircuit;
         }
+
+        // console.log(this.customerData);
+        // this.circuits = this.testCircuit
       });
-      
-      console.log("this.circuits")
-      console.log(this.circuits)
+
+    // console.log("this.circuits")
+    // console.log(this.circuits)
   },
 
   methods: {
     onSave() {
-      console.log(this.customerData);
-      
       const allCircuits = [
         ...this.customerData.sites[0].meters[0].circuits,
         ...this.circuits,
       ];
 
       this.customerData.sites[this.siteIndex].meters[this.meterIndex].circuits =
-        allCircuits;
+        allCircuits; 
 
-      console.log(this.customerData);
+      if (this.valid) {
+        this.$axios
+          .put(`${urls.URL_CUSTOMERS}/${this.customerId}/`, this.customerData)
+          .then(() => {
+            this.notify("New Circuit Added!");
+            this.resetData();
+            // this.$router.push("/");
+          });
+      } else {
+        this.notify("Please fill required areas!");
+      }
+    },
 
-      // if (this.valid) {
-      //   this.$axios
-      //     .put(`${urls.URL_CUSTOMERS}/${this.customerId}/`, this.customerData)
-      //     .then(() => {
-      //       this.notify("New Circuit Added!");
-      //       this.resetData();
-      //       // this.$router.push("/");
-      //     });
-      // } else {
-      //   this.notify("Please fill required areas!");
-      // }
+    onUpdate() {
+      if (this.valid) {
+        this.$axios
+          .put(`${urls.URL_CUSTOMERS}/${this.customerId}`, this.customerData)
+          .then(() => {
+            this.notify("Circuits Updated!");
+            this.resetData();
+            // this.$router.push("/");
+          });
+      } else {
+        this.notify("Please fill required areas!");
+      }
     },
 
     resetData() {

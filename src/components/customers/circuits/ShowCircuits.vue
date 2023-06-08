@@ -11,23 +11,19 @@
               active-class="active"
               exact
             >
-             <v-icon
-            size="large"
-            color="green-darken-2"
-            icon="mdi-pencil-outline"
-            class="mx-1" 
-          ></v-icon>
+              <v-icon
+                size="large"
+                color="green-darken-2"
+                icon="mdi-pencil-outline"
+                class="mx-1"
+              ></v-icon>
             </router-link>
           </div>
 
-          
-
           <v-icon
-            size="large"
             color="red-darken-2"
             icon="mdi-trash-can-outline"
-            class="mx-1"
-            @click="$emit('delete-todo-item', item)"
+            class="mx-3"
           ></v-icon>
         </div>
       </div>
@@ -67,10 +63,10 @@
             <tr>
               <th class="text-left">Name</th>
               <th class="text-left">Installation Date</th>
-              <th class="text-left">Is Main</th> 
+              <th class="text-left">Is Main</th>
             </tr>
           </thead>
-          <tbody> 
+          <tbody>
             <ShowSubCircuits
               v-for="subCircuit in circuit.subCircuits"
               :key="subCircuit.id"

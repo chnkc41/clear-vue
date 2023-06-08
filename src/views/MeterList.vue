@@ -2,7 +2,7 @@
   <div>
     <MainHeader :breadcrumpData="breadcrumpData" />
     <div class="pa-10">
-      <MeterList :customerName="customerName"  />
+      <MeterList :customerName="customerName" />
     </div>
   </div>
 </template>
@@ -22,13 +22,13 @@ export default {
   },
 
   data() {
-    return {  
+    return {
       customerName: "",
       provideDataMeter: {
         meterList: [],
         customerId: "",
         siteId: "",
-        siteIndex: ""
+        siteIndex: "",
       },
       breadcrumpData: {
         title: "Metter List",
@@ -43,7 +43,7 @@ export default {
   provide() {
     return {
       provideDataMeter: this.provideDataMeter,
-      deleteItem: this.deleteCustomer,  
+      deleteItem: this.deleteCustomer,
     };
   },
 
@@ -56,13 +56,14 @@ export default {
       .get(`${urls.URL_CUSTOMERS}/${this.provideDataMeter.customerId}`)
       .then((response) => {
         const currentSite =
-          response.data.sites.filter((s) => s.id === this.provideDataMeter.siteId) || [];
+          response.data.sites.filter(
+            (s) => s.id === this.provideDataMeter.siteId
+          ) || [];
 
         this.provideDataMeter.meterList = currentSite[0]?.meters;
         this.customerName = response.data.name || "";
-        this.breadcrumpData.title = `${response.data.name}'s Metter List  `;
-        console.log("meters");
-        console.log(currentSite[0]?.meters);
+        this.breadcrumpData.title =
+          `${response.data.sites[0].name}'s Metter List & Circuits ` || "";
       });
   },
 

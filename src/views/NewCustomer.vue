@@ -184,10 +184,7 @@
                 </v-btn>
               </v-col>
             </v-row>
-
-            <!-- <v-card-actions>
-              <v-btn>Click me</v-btn>
-            </v-card-actions> -->
+ 
           </v-card>
         </div>
 
@@ -225,12 +222,7 @@
 
 
 <script>
-import { uuid } from "vue-uuid";
-// import {
-//   customerInitialObject,
-//   siteInitialObject,
-//   meterInitialObject,
-// } from "@/constants/initialForms";
+import { uuid } from "vue-uuid"; 
 import MainHeader from "@/components/layout/MainHeader";
 import { urls } from "@/constants/constants.js";
 import { toast } from "vue3-toastify";
@@ -351,10 +343,7 @@ export default {
       });
     },
 
-    addNewSite() {
-      // let new_obj = { ...siteInitialObject, id: uuid.v1() };
-      // new_obj = { ...siteInitialObject, meters: { id: uuid.v1() } };
-
+    addNewSite() { 
       const siteInitialObject = {
         id: uuid.v1(),
         name: "",
@@ -376,8 +365,6 @@ export default {
       };
 
       this.customerData.sites.push(siteInitialObject);
-
-      console.log(this.customerData.sites);
     },
 
     addNewMeter(siteIndex) {

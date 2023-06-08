@@ -2,7 +2,7 @@
   <div>
     <MainHeader :breadcrumpData="breadcrumpData" />
     <div class="pa-10">
-      <TodoList />
+      <CustomerList />
       <ResultBar />
     </div>
   </div>
@@ -10,16 +10,16 @@
 
 <script>
 import MainHeader from "@/components/layout/MainHeader";
-import TodoList from "@/components/customers/TodoList";
+import CustomerList from "@/components/customers/CustomerList";
 import ResultBar from "@/components/customers/ResultBar";
 import { urls } from "@/constants/constants.js";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 
 export default {
-  name: "CustumerList",
+  name: "CustomerMainList",
   components: {
-    TodoList,
+    CustomerList,
     ResultBar,
     MainHeader,
   },
@@ -33,7 +33,7 @@ export default {
         title: "Customer List",
         buttonText: "ADD NEW",
         buttonPath: "/newCustomer/",
-        icon: "mdi-plus"
+        icon: "mdi-plus",
       },
     };
   },
@@ -47,14 +47,12 @@ export default {
 
   created() {
     this.$axios.get(urls.URL_CUSTOMERS).then((response) => {
-      console.log(response);
       this.provideData.customerList = response.data || [];
     });
   },
 
   methods: {
     deleteCustomer(customer) {
-      console.log(customer);
       this.$axios
         .delete(`${urls.URL_CUSTOMERS}/${customer.id}`)
         .then((delete_response) => {
@@ -69,14 +67,6 @@ export default {
           }
         });
     },
-
-    // addNewTodo(todo) {
-    //   console.log(todo);
-    //   this.todoList.push({
-    //     id: new Date().getTime(),
-    //     text: todo,
-    //   });
-    // },
 
     notify(message) {
       toast(message, {

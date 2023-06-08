@@ -19,8 +19,7 @@
   <tr v-show="show">
     <td colspan="6">
       <v-expand-transition>
-        <div v-show="show">
-          <!-- <v-divider></v-divider> -->
+        <div v-show="show"> 
 
           <div>
             <router-link
@@ -53,6 +52,7 @@
 <script>
 import ShowCircuits from "@/components/customers/circuits/ShowCircuits";
 export default {
+  name: "MeterListItem",
   props: ["item", "meterIndex"],
   inject: ["provideDataMeter"],
 

@@ -133,11 +133,6 @@
 
 <script>
 import { uuid } from "vue-uuid";
-// import {
-//   customerInitialObject,
-//   siteInitialObject,
-//   meterInitialObject,
-// } from "@/constants/initialForms";
 import MainHeader from "@/components/layout/MainHeader";
 import { urls } from "@/constants/constants.js";
 import { toast } from "vue3-toastify";
@@ -151,13 +146,7 @@ export default {
   },
 
   data: () => ({
-    valid: false,
-    // breadcrumpData: {
-    //   title: "Add New Circuit",
-    //   buttonText: "Go Back",
-    //   buttonPath: "/",
-    // },
-
+    valid: false, 
     customerId: "",
     siteId: "",
     meterId: "",
@@ -247,21 +236,10 @@ export default {
             response.data.sites[this.siteIndex].meters[this.meterIndex]
               .circuits[this.circuitIndex]
           );
-          // this.circuits = newCircuit;
-          console.log("newCircuit");
-          console.log(newCircuit);
-          console.log("circuit");
-          console.log(this.circuits);
 
           this.circuits = newCircuit;
         }
-
-        // console.log(this.customerData);
-        // this.circuits = this.testCircuit
       });
-
-    // console.log("this.circuits")
-    // console.log(this.circuits)
   },
 
   methods: {
@@ -272,15 +250,14 @@ export default {
       ];
 
       this.customerData.sites[this.siteIndex].meters[this.meterIndex].circuits =
-        allCircuits; 
+        allCircuits;
 
       if (this.valid) {
         this.$axios
           .put(`${urls.URL_CUSTOMERS}/${this.customerId}/`, this.customerData)
           .then(() => {
             this.notify("New Circuit Added!");
-            this.resetData();
-            // this.$router.push("/");
+            this.resetData(); 
           });
       } else {
         this.notify("Please fill required areas!");
@@ -293,8 +270,7 @@ export default {
           .put(`${urls.URL_CUSTOMERS}/${this.customerId}`, this.customerData)
           .then(() => {
             this.notify("Circuits Updated!");
-            this.resetData();
-            // this.$router.push("/");
+            this.resetData(); 
           });
       } else {
         this.notify("Please fill required areas!");
@@ -312,6 +288,8 @@ export default {
     },
 
     addNewCircuit() {
+      // Thıs object ıs used for data ınıtıatıon.
+      // TODO: Move thıs object as a constant under the constant folder.
       const circuitInitialObject = {
         id: uuid.v1(),
         name: "",
@@ -339,8 +317,6 @@ export default {
       };
 
       this.circuits[index].subCircuits.push(subCircuitsObj);
-
-      console.log(this.circuits);
     },
 
     deleteSubCircuit(index, subCircuitIndex) {

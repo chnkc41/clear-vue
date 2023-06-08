@@ -31,7 +31,7 @@
       <v-table>
         <tbody>
           <tr>
-            <th>installation Date</th>
+            <th>Installation Date</th>
             <th>:</th>
             <td>{{ circuit.installationDate }}</td>
           </tr>
@@ -77,8 +77,7 @@
         </v-table>
       </div>
     </v-expand-transition>
-
-    <!--  <v-divider></v-divider>-->
+ 
   </v-card>
 </template>
 
@@ -86,6 +85,7 @@
 import ShowSubCircuits from "@/components/customers/circuits/ShowSubCircuits";
 
 export default {
+  name: "ShowCircuits",
   props: ["circuit", "to"],
   inject: ["provideCustomerData"],
   components: {

@@ -8,8 +8,7 @@
         ></v-btn>
       </v-card-actions>
     </th>
-
-    <!-- <td>{{ item.id }}</td> -->
+ 
     <td>{{ item.name }}</td>
     <td>{{ item.email }}</td>
     <td>{{ item.vatNumber }}</td>
@@ -21,8 +20,7 @@
           class="text-decoration-none"
           active-class="active"
           exact
-        >
-          <!-- color="primary" -->
+        > 
           <v-icon
             color="green-darken-2"
             icon="mdi-pencil-outline"
@@ -45,8 +43,7 @@
   <tr v-show="show">
     <td colspan="6">
       <v-expand-transition>
-        <div v-show="show">
-          <!-- <v-divider></v-divider> --> 
+        <div v-show="show"> 
           <div class="d-flex flex-wrap justify-center my-5">
             <ShowSites
               v-for="(site, index) in item.sites"
@@ -66,6 +63,7 @@
 <script>
 import ShowSites from "@/components/customers/sites/ShowSites";
 export default {
+  name: "CustomerListItem",
   props: ["item"],
   inject: ["provideData", "deleteItem"],
 

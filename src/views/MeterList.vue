@@ -32,9 +32,6 @@ export default {
       },
       breadcrumpData: {
         title: "Metter List",
-        // buttonText: "ADD NEW",
-        // buttonPath: "/newCustomer/",
-        // icon: "mdi-plus",
         goHome: true,
       },
     };
@@ -63,7 +60,7 @@ export default {
         this.provideDataMeter.meterList = currentSite[0]?.meters;
         this.customerName = response.data.name || "";
         this.breadcrumpData.title =
-          `${response.data.sites[0].name}'s Metter List & Circuits ` || "";
+          `${response.data.sites[0].name}'s Meter List & Circuits ` || "";
       });
   },
 

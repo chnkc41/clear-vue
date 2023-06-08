@@ -30,8 +30,7 @@
         class="text-decoration-none"
         active-class="active"
         exact
-      >
-        <!-- color="primary" -->
+      > 
         <v-btn class="ma-2">
           {{ breadcrumpData?.buttonText }}
           <v-icon
@@ -41,8 +40,7 @@
           ></v-icon>
         </v-btn>
       </router-link>
-
-      <!-- color="primary" -->
+ 
       <v-btn class="ma-2" @click="$router.go(-1)"> Go Back </v-btn>
     </div>
   </header>
@@ -51,16 +49,6 @@
 <script>
 export default {
   props: ["breadcrumpData"],
-  // methods: {
-  //   goBack() {
-  //     this.$router.push({
-  //       name: "CircuitsPage",
-  //       params: {
-  //         customerId: "customer1-1",
-  //       },
-  //     });
-  //   },
-  // },
 };
 </script>
  

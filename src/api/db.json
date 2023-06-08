@@ -763,6 +763,80 @@
           ]
         }
       ]
+    },
+    {
+      "id": "03092b10-05eb-11ee-8847-83d7146266d3",
+      "name": "last-test",
+      "email": "last-test@last-test.com",
+      "vatNumber": "last-test",
+      "sites": [
+        {
+          "id": "03095220-05eb-11ee-8847-83d7146266d3",
+          "name": "last-test",
+          "address": "last-test",
+          "postCode": "last-test",
+          "coordinates": {
+            "latitude": "3333",
+            "longitude": "333"
+          },
+          "meters": [
+            {
+              "id": "03095221-05eb-11ee-8847-83d7146266d3",
+              "name": "last-test",
+              "serialNumber": "last-test",
+              "installationDate": "2023-06-05",
+              "circuits": [
+                {
+                  "id": "ada26aa0-05eb-11ee-8345-ddf8a2592868",
+                  "name": "first-circuit",
+                  "installationDate": "2023-06-23",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "ada26aa1-05eb-11ee-8345-ddf8a2592868",
+                      "name": "first-circuit",
+                      "installationDate": "2023-06-22",
+                      "isMain": false
+                    },
+                    {
+                      "id": "b54ba0f0-05eb-11ee-8345-ddf8a2592868",
+                      "name": "first-circuit",
+                      "installationDate": "2023-06-29",
+                      "isMain": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "114b1210-05eb-11ee-8847-83d7146266d3",
+              "name": "last-test",
+              "serialNumber": "last-test",
+              "installationDate": "2023-06-14",
+              "circuits": []
+            }
+          ]
+        },
+        {
+          "id": "2751a6a0-05eb-11ee-8847-83d7146266d3",
+          "name": "last-test-updated",
+          "address": "last-test-updated",
+          "postCode": "last-test-updated",
+          "coordinates": {
+            "latitude": "22",
+            "longitude": "22"
+          },
+          "meters": [
+            {
+              "id": "2751a6a1-05eb-11ee-8847-83d7146266d3",
+              "name": "last-test-updated",
+              "serialNumber": "last-test-updated",
+              "installationDate": "2023-06-13",
+              "circuits": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

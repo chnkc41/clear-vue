@@ -7,8 +7,7 @@
           @click="show = !show"
         ></v-btn>
       </v-card-actions>
-    </th>
-    <!-- <td>{{ meter.id }}</td> -->
+    </th> 
     <td>{{ meter.name }}</td>
     <td>{{ meter.installationDate }}</td>
     <td>{{ meter.serialNumber }}</td>
@@ -38,7 +37,7 @@
     <div v-show="show">
       <v-divider></v-divider>
 
-      <div class="d-flex flex-wrap mt-3">  
+      <div class="d-flex flex-wrap mt-3">
         <ShowCircuits
           v-for="item in meter.circuits"
           :key="item.id"
@@ -54,9 +53,10 @@
 import ShowCircuits from "@/components/customers/ShowCircuits";
 
 export default {
+  name: "ShowMeters",
   props: ["meter"],
   components: {
-    ShowCircuits
+    ShowCircuits,
   },
   data: () => ({
     show: false,

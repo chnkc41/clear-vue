@@ -8,7 +8,7 @@
 
     <div>
       <div class="d-flex justify-space-between align-content-start">
-        <v-card-title> Site Name: {{ site.name }} </v-card-title> 
+        <v-card-title> Site Name: {{ site.name }} </v-card-title>
       </div>
 
       <v-table>
@@ -52,20 +52,18 @@
 
 <script>
 export default {
+  name: "ShowSites",
   props: ["site", "customerId", "siteId", "siteIndex"],
   inject: ["provideCustomerData"],
 
   created() {
     this.metersPath = this.provideCustomerData.id;
-    console.log(this.provideCustomerData);
-    console.log(this.provideCustomerData.id);
   },
 
   data: () => ({
     show: false,
     metersPath: "",
   }),
- 
 };
 </script>
 

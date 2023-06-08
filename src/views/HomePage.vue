@@ -1,16 +1,16 @@
 <template>
   <div>
-    <CustumerList />
+    <CustomerMainList />
   </div>
 </template>
 
 <script>
-import CustumerList from "@/components/customers/CustumerList";
+import CustomerMainList from "@/components/customers/CustomerMainList";
 
 export default {
   name: "HomePage",
   components: {
-    CustumerList,
+    CustomerMainList,
   },
 };
 </script>

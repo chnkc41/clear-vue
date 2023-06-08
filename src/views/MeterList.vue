@@ -32,7 +32,7 @@ export default {
       },
       breadcrumpData: {
         title: "Metter List",
-        goHome: true,
+        goBack: true,
       },
     };
   },

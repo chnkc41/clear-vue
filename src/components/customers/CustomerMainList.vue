@@ -34,6 +34,7 @@ export default {
         buttonText: "ADD NEW",
         buttonPath: "/newCustomer/",
         icon: "mdi-plus",
+        goBack: false
       },
     };
   },

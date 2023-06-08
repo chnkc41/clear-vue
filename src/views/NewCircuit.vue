@@ -1,5 +1,5 @@
 <template>
-  <MainHeader />
+  <MainHeader :breadcrumpData="breadcrumpData" />
 
   <v-card max-width="900px" class="mx-auto">
     <v-form v-model="valid" fast-fail @submit.prevent>
@@ -146,6 +146,10 @@ export default {
   },
 
   data: () => ({
+    breadcrumpData: {
+      title: "Add New Customer",
+      goBack: true,
+    },  
     valid: false, 
     customerId: "",
     siteId: "",

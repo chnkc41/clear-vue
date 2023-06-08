@@ -15,22 +15,12 @@
 
     <div>
       <router-link
-        to="/"
-        class="text-decoration-none"
-        active-class="active"
-        exact
-        v-show="breadcrumpData?.goHome"
-      >
-        <v-btn class="ma-2"> Customers </v-btn>
-      </router-link>
-
-      <router-link
         v-if="breadcrumpData?.buttonText"
         :to="breadcrumpData?.buttonPath || '/'"
         class="text-decoration-none"
         active-class="active"
         exact
-      > 
+      >
         <v-btn class="ma-2">
           {{ breadcrumpData?.buttonText }}
           <v-icon
@@ -40,8 +30,14 @@
           ></v-icon>
         </v-btn>
       </router-link>
- 
-      <v-btn class="ma-2" @click="$router.go(-1)"> Go Back </v-btn>
+
+      <v-btn
+        class="ma-2"
+        @click="$router.go(-1)"
+        v-show="breadcrumpData?.goBack"
+      >
+        Go Back
+      </v-btn>
     </div>
   </header>
 </template>

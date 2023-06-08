@@ -237,8 +237,7 @@ export default {
     valid: false,
     breadcrumpData: {
       title: "Add New Customer",
-      buttonText: "Go Back",
-      buttonPath: "/",
+      goBack: true,
     },
     customerId: null,
 

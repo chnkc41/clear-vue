@@ -1,0 +1,514 @@
+{ 
+  "customers": [
+    {
+      "id": "test-122",
+      "name": "test2",
+      "email": "cihankoc41@gmail.com",
+      "vatNumber": "vat-1234",
+      "sites": [
+        {
+          "id": "site1-1",
+          "name": "Site 1",
+          "coordinates": {
+            "latitude": 35.937496,
+            "longitude": 35.937496
+          },
+          "address": "adres-xx1",
+          "postCode": "postal-code-xx",
+          "meters": [
+            {
+              "id": "mater1-1",
+              "name": "Mater 1.1",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-1-1",
+                  "name": "Circuit 1.1.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-1-2",
+                  "name": "Circuit 1.1.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "ea3f8080-058a-11ee-8c68-254a69895e46",
+                  "name": "kk",
+                  "installationDate": "2023-06-09",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "ea3f8081-058a-11ee-8c68-254a69895e46",
+                      "name": "kk",
+                      "installationDate": "2023-06-07",
+                      "isMain": false
+                    }
+                  ]
+                },
+                {
+                  "id": "3d82cf40-058b-11ee-8c68-254a69895e46",
+                  "name": "fff",
+                  "installationDate": "2023-06-10",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "3d82cf41-058b-11ee-8c68-254a69895e46",
+                      "name": "ff",
+                      "installationDate": "2023-06-01",
+                      "isMain": false
+                    }
+                  ]
+                },
+                {
+                  "id": "5f2e0ab0-058b-11ee-8c68-254a69895e46",
+                  "name": "tt",
+                  "installationDate": "2023-06-06",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "5f2e0ab1-058b-11ee-8c68-254a69895e46",
+                      "name": "tt",
+                      "installationDate": "2023-06-01",
+                      "isMain": false
+                    },
+                    {
+                      "id": "62e3bfb0-058b-11ee-8c68-254a69895e46",
+                      "name": "tt",
+                      "installationDate": "2023-05-31",
+                      "isMain": false
+                    }
+                  ]
+                },
+                {
+                  "id": "68d38630-058b-11ee-8c68-254a69895e46",
+                  "name": "tt-2",
+                  "installationDate": "2023-06-22",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "68d38631-058b-11ee-8c68-254a69895e46",
+                      "name": "tt-2",
+                      "installationDate": "2023-06-02",
+                      "isMain": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mater-1-2",
+              "name": "Mater 1.2",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-2-1",
+                  "name": "Circuit 1.2.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-2-2",
+                  "name": "Circuit 1.2.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "site2",
+          "name": "Site 1",
+          "coordinates": {
+            "latitude": 35.937496,
+            "longitude": 35.937496
+          },
+          "address": "adres-xx1",
+          "postCode": "postal-code-xx",
+          "meters": [
+            {
+              "id": "mater1-1",
+              "name": "Mater 1.1",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-1-1",
+                  "name": "Circuit 1.1.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-1-2",
+                  "name": "Circuit 1.1.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mater-1-2",
+              "name": "Mater 1.2",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-2-1",
+                  "name": "Circuit 1.2.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-2-2",
+                  "name": "Circuit 1.2.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customer1-122",
+      "name": "Cihan site2",
+      "email": "cihankoc41@gmail.com",
+      "vatNumber": "vat-1234",
+      "sites": [
+        {
+          "id": "site1-1",
+          "name": "Site 1",
+          "coordinates": {
+            "latitude": 35.937496,
+            "longitude": 35.937496
+          },
+          "address": "adres-xx1",
+          "postCode": "postal-code-xx",
+          "meters": [
+            {
+              "id": "mater1-1",
+              "name": "Mater 1.1",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-1-1",
+                  "name": "Circuit 1.1.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-1-2",
+                  "name": "Circuit 1.1.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mater-1-2",
+              "name": "Mater 1.2",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-2-1",
+                  "name": "Circuit 1.2.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-2-2",
+                  "name": "Circuit 1.2.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "site2",
+          "name": "Site 1",
+          "coordinates": {
+            "latitude": 35.937496,
+            "longitude": 35.937496
+          },
+          "address": "adres-xx1",
+          "postCode": "postal-code-xx",
+          "meters": [
+            {
+              "id": "mater1-1",
+              "name": "Mater 1.1",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-1-1",
+                  "name": "Circuit 1.1.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-1-2",
+                  "name": "Circuit 1.1.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.1.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.1.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mater-1-2",
+              "name": "Mater 1.2",
+              "serialNumber": "unique-xx",
+              "installationDate": "Mon Jun 05 2023",
+              "circuits": [
+                {
+                  "id": "circuit-1-2-1",
+                  "name": "Circuit 1.2.1",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.1.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.1.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                },
+                {
+                  "id": "circuit-1-2-2",
+                  "name": "Circuit 1.2.2",
+                  "installationDate": "Mon Jun 05 2023",
+                  "isMain": true,
+                  "subCircuits": [
+                    {
+                      "id": "subCircuits1",
+                      "name": "Circuit 1.2.2.1",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    },
+                    {
+                      "id": "subCircuits2",
+                      "name": "Circuit 1.2.2.2",
+                      "installationDate": "Mon Jun 05 2023",
+                      "is_main": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
